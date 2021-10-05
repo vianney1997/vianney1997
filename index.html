@@ -1,0 +1,17 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+    <h1 style="color: green;">Kanairo Car Hire Home</h1>
+    <p>Welcome to Kanairo Car Hire LTD. You home of quality and safe vehicles for hire</p>
+    <h2 style="color: green;">Some Dynamic Content</h2>
+    <p><strong>Our car listings at a Glance</strong></p>
+
+    <ul>
+        <li style="color: brown;"><strong>Listed Vehicles:</strong> {{ cars_count }} </li>
+        <li style="color: brown;"><strong>Available Cars:</strong> {{ num_cars_available }} </li>
+        <!-- <li><strong>Toyota Cars Listed:</strong> {{ num_toyota }}</li> -->
+    </ul>
+    <p>You have visited this page {{ number_of_visits }} time{{ number_of_visits|pluralize }}.</p>
+    <p><a href="{% url 'logout' %}">log out</a></p>
+{% endblock %}
+
